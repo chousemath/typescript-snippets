@@ -54,4 +54,23 @@ var Car;
     Car[Car["Hyundai"] = 222] = "Hyundai";
     Car[Car["Mitsubishi"] = 333] = "Mitsubishi";
 })(Car || (Car = {}));
-console.log(Car.Toyota + Car.Hyundai + Car.Mitsubishi); // outputs: 777
+console.log(Car.Toyota + Car.Hyundai + Car.Mitsubishi); // outputs: 666
+// any type
+// this is basically a regular, JavaSCript, dynamic type
+var myVar;
+myVar = 'dog';
+myVar = 123;
+myVar = false;
+// explicitly declaring return type of function
+function returnMyAge() { return myAge; }
+alert('my age is: ' + returnMyAge());
+// void type explicity declares that a function does not return anything
+function justShout() { alert('just shout baby!'); }
+justShout();
+// explicity declare function argument types
+function add(num1, num2) { return num1 + num2; }
+alert(add(123, 321));
+function subtract(num1, num2) {
+    return num1 - num2;
+}
+alert(subtract(100, 1));

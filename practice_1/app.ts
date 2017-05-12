@@ -63,3 +63,17 @@ let myVar: any
 myVar = 'dog'
 myVar = 123
 myVar = false
+
+// explicitly declaring return type of function
+function returnMyAge (): number { return myAge }
+alert('my age is: ' + returnMyAge())
+// void type explicity declares that a function does not return anything
+function justShout (): void { alert('just shout baby!') }
+justShout()
+// explicity declare function argument types
+function add (num1: number, num2: number): number { return num1 + num2 }
+alert(add(123, 321))
+function subtract (num1: number, num2: number): number {
+  return num1 - num2
+}
+alert(subtract(100, 1))
