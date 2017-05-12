@@ -74,3 +74,23 @@ function subtract(num1, num2) {
     return num1 - num2;
 }
 alert(subtract(100, 1));
+function concatStrings(string1, string2) {
+    return string1 + ' ' + string2;
+}
+// function types
+var myNewFunc;
+myNewFunc = subtract;
+alert(myNewFunc(200, 50));
+var myNewFunc2;
+myNewFunc2 = concatStrings;
+alert(myNewFunc2('Hello', 'world!'));
+// object types
+// for objects in TypeScript, name of properties is important
+var obj1 = { a: 1, b: 'hello' };
+// Type '{}' is not assignable to type '{ 'a': number; 'b': number; }'.
+// Property ''a'' is missing in type '{}'.
+// obj1 = {}
+// reassignment is okay so long as all the property names match up
+obj1 = { a: 123, b: '321' };
+// you can be explicit with the names and types of properties
+var obj2 = { x: 32.5, y: 124.2 };

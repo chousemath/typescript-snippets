@@ -77,3 +77,24 @@ function subtract (num1: number, num2: number): number {
   return num1 - num2
 }
 alert(subtract(100, 1))
+function concatStrings (string1: string, string2: string): string {
+  return string1 + ' ' + string2
+}
+// function types
+let myNewFunc: (num1: number, num2: number) => number
+myNewFunc = subtract
+alert(myNewFunc(200, 50))
+let myNewFunc2: (str1: string, str2: string) => string
+myNewFunc2 = concatStrings
+alert(myNewFunc2('Hello', 'world!'))
+
+// object types
+// for objects in TypeScript, name of properties is important
+let obj1 = { a: 1, b: 'hello' }
+// Type '{}' is not assignable to type '{ 'a': number; 'b': number; }'.
+// Property ''a'' is missing in type '{}'.
+// obj1 = {}
+// reassignment is okay so long as all the property names match up
+obj1 = { a: 123, b: '321' }
+// you can be explicit with the names and types of properties
+let obj2: { x: number, y: number } = { x: 32.5, y: 124.2 }
