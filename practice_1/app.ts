@@ -122,3 +122,15 @@ let myMixedAge: string | number = "26"
 myMixedAge = 26
 let iAmTall: number | boolean = true
 iAmTall = 6
+
+// checking type
+if (typeof myMixedAge == 'string') {
+  alert('myMixedAge is currently a string')
+} else if (typeof myMixedAge == 'number') {
+  alert('myMixedAge is currently a number')
+}
+
+// the never type
+function neverReturns(): never {
+  throw new Error('An error, should never return...')
+}

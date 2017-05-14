@@ -101,4 +101,22 @@ var obj3 = {
         return myString.split('');
     }
 };
+var obj4 = {
+    part1: "I am a complex object",
+    part2: 12345,
+    part3: 5 > 4
+};
 alert(obj3.val2("hello"));
+// you can define union types for ambiguous situations
+var myMixedAge = "26";
+// you can reassign to a number because myMixedAge is of union type
+myMixedAge = 26;
+var iAmTall = true;
+iAmTall = 6;
+// checking type
+if (typeof myMixedAge == 'string') {
+    alert('myMixedAge is currently a string');
+}
+else if (typeof myMixedAge == 'number') {
+    alert('myMixedAge is currently a number');
+}
