@@ -107,4 +107,18 @@ let obj3: Complex = {
     return myString.split('')
   }
 }
+type Complex2 = { part1: string, part2: number, part3: boolean }
+let obj4: Complex2 = {
+  part1: "I am a complex object",
+  part2: 12345,
+  part3: 5 > 4
+}
+
 alert(obj3.val2("hello"))
+
+// you can define union types for ambiguous situations
+let myMixedAge: string | number = "26"
+// you can reassign to a number because myMixedAge is of union type
+myMixedAge = 26
+let iAmTall: number | boolean = true
+iAmTall = 6
