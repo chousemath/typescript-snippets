@@ -98,8 +98,10 @@ let obj1 = { a: 1, b: 'hello' }
 obj1 = { a: 123, b: '321' }
 // you can be explicit with the names and types of properties
 let obj2: { x: number, y: number } = { x: 32.5, y: 124.2 }
+// you can create type aliases for cleaner code
+type Complex = { val1: number[], val2: (myString: string) => string[]}
 // create complex objects
-let obj3: { val1: number[], val2: (myString: string) => string[]} = {
+let obj3: Complex = {
   val1: [1, 2, 3],
   val2: function(myString: string) {
     return myString.split('')
