@@ -98,3 +98,11 @@ let obj1 = { a: 1, b: 'hello' }
 obj1 = { a: 123, b: '321' }
 // you can be explicit with the names and types of properties
 let obj2: { x: number, y: number } = { x: 32.5, y: 124.2 }
+// create complex objects
+let obj3: { val1: number[], val2: (myString: string) => string[]} = {
+  val1: [1, 2, 3],
+  val2: function(myString: string) {
+    return myString.split('')
+  }
+}
+alert(obj3.val2("hello"))

@@ -94,3 +94,11 @@ var obj1 = { a: 1, b: 'hello' };
 obj1 = { a: 123, b: '321' };
 // you can be explicit with the names and types of properties
 var obj2 = { x: 32.5, y: 124.2 };
+// create complex objects
+var obj3 = {
+    val1: [1, 2, 3],
+    val2: function (myString) {
+        return myString.split('');
+    }
+};
+alert(obj3.val2("hello"));
