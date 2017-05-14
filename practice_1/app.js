@@ -120,3 +120,7 @@ if (typeof myMixedAge == 'string') {
 else if (typeof myMixedAge == 'number') {
     alert('myMixedAge is currently a number');
 }
+// the never type
+function neverReturns() {
+    throw new Error('An error, should never return...');
+}
